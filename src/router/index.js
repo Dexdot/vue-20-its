@@ -21,7 +21,7 @@ export default new Router({
     },
     {
       path: '/rick',
-      component: PageRcik
+      component: PageRick
     }
   ]
 });

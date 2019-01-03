@@ -1,0 +1,19 @@
+// Подчеркивание как на Basic Agency
+=underbasic($height: 2px)
+  padding-bottom: 2px
+  position: relative
+  display: inline-block
+  vertical-align: top
+  overflow: hidden
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 4px
+    width: 100%
+    height: 0
+    border-bottom: $height solid $g
+
+    transition: transform .8s cubic-bezier(.58,.3,.005,1)
+  &:hover::after
+    animation: text-link-hover .8s cubic-bezier(.58,.3,.005,1) 0s 1

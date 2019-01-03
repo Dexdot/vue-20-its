@@ -1,11 +1,12 @@
 {
-  "name": "vue-20-its",
+  "name": "its.20",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "deploy": "yarn build && cd dist && now && now alias 20-its",
+    "deploy": "yarn build && cd dist && now && now alias its.birthday",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "yarn sprite && vue-cli-service build",
+    "sprite": "gulp sprite"
   },
   "dependencies": {
     "gsap": "^2.0.2",
@@ -17,9 +18,15 @@
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-service": "^3.0.4",
     "babel-plugin-component": "^1.1.1",
+    "gulp": "3.9.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-svgmin": "^2.1.0",
+    "gulp-svgstore": "^7.0.1",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "style-resources-loader": "^1.2.1",
+    "vue-svg-sprite": "^1.2.3",
     "vue-template-compiler": "^2.5.17"
   },
   "postcss": {
